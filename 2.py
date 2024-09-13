@@ -1,0 +1,5 @@
+N = int(input())
+b = int(input())
+c = int(input())
+poryadki = list(map(int, N[0].split('')))
+print(poryadki)
