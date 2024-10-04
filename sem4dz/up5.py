@@ -1,8 +1,5 @@
-
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
-
 
 df = pd.read_csv('BTC_data.csv')
 print(df)
@@ -17,7 +14,7 @@ tim_first = tim[0]
 tim_last = tim[-1]
 plt.plot(tim, clos, 'r')
 
-plt.xlabel('Date', fontsize = 16, loc = "right")
+plt.xlabel('Date', fontsize = 16)
 plt.ylabel('Cost', fontsize = 16, loc = "center")
 
 ticks_tim = [tim[i] for i in range(len(tim)) if i%50 == 0]
@@ -26,4 +23,5 @@ ticks_tim = [tim[i] for i in range(len(tim)) if i%50 == 0]
 plt.xticks(ticks_tim, fontsize = 8)
 plt.xticks(rotation=50)
 plt.grid()
+plt.tight_layout()
 plt.show()
